@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <?php if ($missing || $errors) { ?>
                 <p class="text-danger">Please fix the item(s) indicated.</p>
             <?php } ?>
-            <p class="lead">Reach out to Us with the Form below...</p>
+            <p class="lead">Reach out to Us with the Form below</p>
             <div class="row">
                 <div class="col-md-6">
                     <form method="post" action="<?= htmlentities($_SERVER['PHP_SELF']) ?>">
@@ -33,8 +33,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <span class="text-danger">Please enter your name</span>
                             <?php } ?></label>
                             <input name="name" id="name" type="text" class="form-control" <?php if ($missing || $errors) {
-                                                                                                echo 'value="' . htmlentities($name) . '"';
-                                                                                            } ?>>
+    echo 'value="' . htmlentities($name) . '"';
+} ?>>
                         </p>
                         <p class="form-group">
                             <label for="email">Email: <?php if (in_array('email', $missing)) { ?>
@@ -54,8 +54,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     </form>
                     <pre>
                 <!-- <?php if ($_POST) {
-                            print_r($_POST);
-                        } ?> -->
+    print_r($_POST);
+} ?> -->
                 </pre>
                 </div>
             </div>
